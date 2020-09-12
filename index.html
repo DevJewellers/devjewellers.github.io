@@ -1888,14 +1888,14 @@ if(customer_length==null){console.log("No customers!")}
 else{	
 						     
 for(z=1;z<=objLength(customer_length);z++){
-			console.log(z);												     
+														     
 	 window['inv'+z]=customer_length[z];
 	 window['invStr'+z]=window['inv'+z].name + '-' +window['inv'+z].date + '-' + window['inv'+z].invoice_no	+ '-' + window['inv'+z].phone													     
 	 window['invStr'+z]= window['invStr'+z].replace(/ /g,'-');
 	 window['invStr'+z]= window['invStr'+z].replace("/",'-');
 	 window['invStr'+z]= window['invStr'+z].replace("/",'-');						   
 	 window['liElem'+z]=document.createElement("li");
-	 window['liElem'+z].class="contents";	console.log(z);
+	 window['liElem'+z].class="contents";	
 	 window['liElem'+z].title=window['invStr'+z];
 	 window['liElem'+z].id=window['invStr'+z];			    
 	 window['liElem'+z].innerHTML=window['invStr'+z];	
@@ -1903,7 +1903,8 @@ for(z=1;z<=objLength(customer_length);z++){
 	 window['liElem'+z].style.fontSize="initial"
 	 window['liElem'+z].style.margin="10px auto"
 	 window['liElem'+z].style.cursor="pointer"	
-	 window['liElem'+z].style.fontStyle="sans-serif"					  
+	 window['liElem'+z].style.fontStyle="sans-serif"
+							console.log(z);
 	 window['liElem'+z].addEventListener('click',function(){dialogClose();console.log(z);})
 	 window['liElem'+z].addEventListener('click',function(){console.log(z);get_data(eval(customer_length[z]));})
 	 window['liElem'+z].addEventListener('click',function(){ saveBool=false;})	
@@ -1911,7 +1912,7 @@ for(z=1;z<=objLength(customer_length);z++){
 	 window['liElem'+z].addEventListener('mouseout',function(){this.style.color="black";this.style.textDecoration="none";})	
 	 x.push(window['liElem'+z]);										   
 	 document.getElementById("clist").appendChild(window['liElem'+z])
-					console.log(z);
+				
 				     }}
 					})			  
 					  		
