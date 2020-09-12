@@ -1847,38 +1847,11 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 		/*database functions end*/
 				 /*dialog show function start*/
 	function showCustomers(){
+				 
+document.querySelector("#loader").style.display= "flex";
+document.body.style.position="fixed";
+document.body.style.overflow="hidden";		
 				 new Audio('click.mp3').play(); 
-				var dialog= document.getElementById("dialog") 
-				 dialog.style.display="flex"
-				document.body.style.position="fixed"
-				document.body.style.overflow="hidden";				    
-				 }	
-				/*dialog show function end*/
-								    /*dialog close function start*/
-								  function dialogClose(){
-								    new Audio('click.mp3').play() ;
-								    document.getElementById("dialog").style.display="none";
-								     document.body.style.position="initial"
-								document.body.style.overflow="auto";
-								    } 
-								    /*dialog close function end*/
-								 var saveBool=false   
-	var x=[];	
-firebase.database().ref('customers').on('value', function(snapshot){	
-	
-document.querySelector("#loader").style.display="none"; 
-document.body.style.position="initial";	
-document.body.style.overflow="auto";	
-				   
-customer_length=snapshot.val();
-if(customer_length==null){
-document.getElementById("inno").value="1"
-}
-					 else{
-document.getElementById("inno").value=(parseInt(objLength(customer_length))+1)
-			}      
-console.log("Downloaded all customers Successfully");
-  document.getElementById("clist").innerHTML="";
 if(customer_length==null){console.log("No customers!")}
 else{	
 						     
@@ -1907,8 +1880,47 @@ for(z=1;z<=objLength(customer_length);z++){
 	 x.push(window['liElem'+z]);										   
 	 document.getElementById("clist").appendChild(window['liElem'+z])
 				     }}
+				 
+				var dialog= document.getElementById("dialog") 
+				 dialog.style.display="flex"
+				document.body.style.position="fixed"
+				document.body.style.overflow="hidden";	
+								     
 					
-						})			  
+document.querySelector("#loader").style.display="none"; 
+document.body.style.position="initial";	
+document.body.style.overflow="auto";	
+							     
+								     
+				 }	
+				/*dialog show function end*/
+								    /*dialog close function start*/
+								  function dialogClose(){
+								    new Audio('click.mp3').play() ;
+								    document.getElementById("dialog").style.display="none";
+								     document.body.style.position="initial"
+								document.body.style.overflow="auto";
+								    } 
+								    /*dialog close function end*/
+								 var saveBool=false   
+	var x=[];	
+firebase.database().ref('customers').on('value', function(snapshot){	
+	
+document.querySelector("#loader").style.display="none"; 
+document.body.style.position="initial";	
+document.body.style.overflow="auto";	
+				   
+customer_length=snapshot.val();
+if(customer_length==null){
+document.getElementById("inno").value="1"
+}
+					 else{
+document.getElementById("inno").value=(parseInt(objLength(customer_length))+1)
+			}      
+console.log("Downloaded all customers Successfully");
+  document.getElementById("clist").innerHTML="";
+
+					})			  
 					  		
 					  
  /*search function start*/
