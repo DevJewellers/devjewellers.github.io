@@ -1889,9 +1889,9 @@ console.log("Downloaded all customers Successfully");
   document.getElementById("clist").innerHTML="";
 if(customer_length==null){console.log("No customers!")}
 else{	
-						     
+let moo=0						     
 for(z=1;z<=objLength(customer_length);z++){
-														     
+	 window['inv'+moo]=moo++									     
 	 window['inv'+z]=customer_length[z];
 	 window['invStr'+z]=window['inv'+z].name + '-' +window['inv'+z].date + '-' + window['inv'+z].invoice_no	+ '-' + window['inv'+z].phone													     
 	 window['invStr'+z]= window['invStr'+z].replace(/ /g,'-');
@@ -1907,8 +1907,8 @@ for(z=1;z<=objLength(customer_length);z++){
 	 window['liElem'+z].style.margin="10px auto"
 	 window['liElem'+z].style.cursor="pointer"	
 	 window['liElem'+z].style.fontStyle="sans-serif"
-	 window['liElem'+z].addEventListener('click',function(){console.log(z);get_data(eval(customer_length[eval(z-1)]));})
-	 window['liElem'+z].addEventListener('click',function(){ saveBool=false;})	
+	 window['liElem'+z].addEventListener('click',function(){console.log(window['inv'+moo]);get_data( window['inv'+moo]);})
+	 window['liElem'+z].addEventListener('click',function(){dialogClose(); saveBool=false;})	
 	 window['liElem'+z].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET";this.style.textDecoration="underline";})
 	 window['liElem'+z].addEventListener('mouseout',function(){this.style.color="black";this.style.textDecoration="none";})	
 	 x.push(window['liElem'+z]);										   
