@@ -1900,7 +1900,7 @@ for(s=1;s<=objLength(customer_length);s++){
 	 window['liElem'+s].style.cursor="pointer"	
 	 window['liElem'+s].style.fontStyle="sans-serif"					  
 	 window['liElem'+s].addEventListener('click',function(){dialogClose()})
-	 window['liElem'+s].addEventListener('click',function(){get_data(eval(window["inv"+s]));})
+	 window['liElem'+s].addEventListener('click',function(){get_data(eval(window["inv"+s])); console.log(typeOf(eval(window["inv"+s])))})
 	 window['liElem'+s].addEventListener('click',function(){ saveBool=false;})	
 	 window['liElem'+s].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET";this.style.textDecoration="underline";})
 	 window['liElem'+s].addEventListener('mouseout',function(){this.style.color="black";this.style.textDecoration="none";})	
