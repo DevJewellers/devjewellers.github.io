@@ -1802,7 +1802,7 @@ document.getElementById("ind").value=date;
 if (document.readyState !== "complete") {
 document.querySelector("#loader").style.display= "flex";
 document.body.style.position="fixed";
-document.html.style.overflow="hidden";			    
+document.body.style.overflow="hidden";			    
     } 
 else{			      
 }
@@ -1868,7 +1868,7 @@ firebase.database().ref('customers').on('value', function(snapshot){
 	
 document.querySelector("#loader").style.display="none"; 
 document.body.style.position="initial";	
-document.html.style.overflow="auto";	
+document.body.style.overflow="auto";	
 				   
 customer_length=snapshot.val();
 if(customer_length==null){
