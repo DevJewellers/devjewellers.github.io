@@ -711,6 +711,61 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
 	
 	</div>
 	<div id="error" style="display:none;"><h1 style='color:red;'>Error 404!</h1><h2 style='color:red;'>Not Found!</h2></div>
+	 <link href="loader.css" rel="stylesheet">
+			<!--loader start-->
+									 <section id="loader">
+            
+        <div class="wrapper"><div class="spinner-container">
+    <div class="spinner-layer spinner-layer--blue">
+        <div class="spinner-clipper spinner-clipper--left">
+            <div class="spinner-circle"></div>
+        </div>        
+        <div class="spinner--patch">
+          <div class="spinner-circle"></div>
+        </div>
+        <div class="spinner-clipper spinner-clipper--right">
+            <div class="spinner-circle"></div>
+        </div>
+    </div>
+
+    <div class="spinner-layer spinner-layer--red">
+        <div class="spinner-clipper spinner-clipper--left">
+            <div class="spinner-circle"></div>
+        </div>        
+        <div class="spinner--patch">
+          <div class="spinner-circle"></div>
+        </div>
+        <div class="spinner-clipper spinner-clipper--right">
+            <div class="spinner-circle"></div>
+        </div>
+    </div>
+
+    <div class="spinner-layer spinner-layer--yellow">
+        <div class="spinner-clipper spinner-clipper--left">
+            <div class="spinner-circle"></div>
+        </div>        
+        <div class="spinner--patch">
+          <div class="spinner-circle"></div>
+        </div>
+        <div class="spinner-clipper spinner-clipper--right">
+            <div class="spinner-circle"></div>
+        </div>
+    </div>
+
+    <div class="spinner-layer spinner-layer--green">
+        <div class="spinner-clipper spinner-clipper--left">
+            <div class="spinner-circle"></div>
+        </div>        
+        <div class="spinner--patch">
+          <div class="spinner-circle"></div>
+        </div>
+        <div class="spinner-clipper spinner-clipper--right">
+            <div class="spinner-circle"></div>
+        </div>
+    </div>
+</div></div></section>			   
+												   
+								<!--loader end-->
   <body>
    
      	<!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -737,12 +792,32 @@ var database = firebase.database();
 	</script>
 	  
 	   <script>
+		   
+		   
+		   		     
+		document.onreadystatechange = function() { 
+if (document.readyState !== "complete") {
+document.querySelector("#loader").style.display= "flex";
+document.body.style.position="fixed";
+document.body.style.overflow="hidden";			    
+    } 
+else{			      
+}
+    } 
+
+		   
+		   
+		   
 		   if(window.location.search.includes("?dev-jewellers-")){
 			   var searchNumber=window.location.search.replace("?dev-jewellers-","");
 			   console.log(searchNumber)
 			database.ref('customers/'+searchNumber).on('value', function(snapshot){get_data(snapshot.val());
 											        document.getElementById("invoice").style.display="block";
-											       
+											       	
+document.querySelector("#loader").style.display="none"; 
+document.body.style.position="initial";	
+document.body.style.overflow="auto";	
+	
 											      })
 			
 		 
