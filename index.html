@@ -1907,7 +1907,7 @@ for(z=1;z<=objLength(customer_length);z++){
 	 window['liElem'+z].style.margin="10px auto"
 	 window['liElem'+z].style.cursor="pointer"	
 	 window['liElem'+z].style.fontStyle="sans-serif"; console.log(z);
-	 window['liElem'+z].addEventListener('click',function(){ console.log(z);console.log(window['inv'+z]);get_data(window['inv'+z]);})
+	 window['liElem'+z].onclick="function(){ console.log(z);console.log(window['inv'+z]);get_data(window['inv'+z]);}"
 	 window['liElem'+z].addEventListener('click',function(){dialogClose(); saveBool=false;})	
 	 window['liElem'+z].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET";this.style.textDecoration="underline";})
 	 window['liElem'+z].addEventListener('mouseout',function(){this.style.color="black";this.style.textDecoration="none";})	
