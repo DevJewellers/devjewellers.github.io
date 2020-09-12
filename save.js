@@ -267,8 +267,8 @@ sub_total:sub_total,
 var customer_length;
 
 
-function get_data(myData){
- 
+function get_data(mydata){
+ myData=eval(mydata);
 
 
 
