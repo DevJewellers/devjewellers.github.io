@@ -1908,7 +1908,7 @@ for(z=1;z<=objLength(customer_length);z++){
 	 window['liElem'+z].style.cursor="pointer"	
 	 window['liElem'+z].style.fontStyle="sans-serif";
 	 window['liElem'+z].data=window['inv'+z];
-	 console.log("Invoice Number "+z+"'s datadownloaded");
+	 console.log("Invoice Number "+z+"'s data downloaded");
 	 window['liElem'+z].addEventListener('click',function(){get_data(this.data);console.log(this.data);console.log("successfully entered data into invoice code 200 \n"+this.data);})	
 	 window['liElem'+z].addEventListener('click',function(){dialogClose(); saveBool=false;})	
 	 window['liElem'+z].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET";this.style.textDecoration="underline";})
