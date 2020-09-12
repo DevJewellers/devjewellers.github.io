@@ -1889,9 +1889,9 @@ console.log("Downloaded all customers Successfully");
   document.getElementById("clist").innerHTML="";
 if(customer_length==null){console.log("No customers!")}
 else{	
-let moo=0						     
+	let z;					     
 for(z=1;z<=objLength(customer_length);z++){
-	 window['inv'+moo]=moo++									     
+										     
 	 window['inv'+z]=customer_length[z];
 	 window['invStr'+z]=window['inv'+z].name + '-' +window['inv'+z].date + '-' + window['inv'+z].invoice_no	+ '-' + window['inv'+z].phone													     
 	 window['invStr'+z]= window['invStr'+z].replace(/ /g,'-');
