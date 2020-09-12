@@ -1887,7 +1887,7 @@ console.log("Downloaded all customers Successfully");
 if(customer_length==null){console.log("No customers!")}
 else{	
 						     
-for(z=1;z<=objLength(customer_length);z++){
+for(z=0;z<=objLength(customer_length);z++){
 															     
 	 window['inv'+z]=customer_length[z];
 	 window['invStr'+z]=window['inv'+z].name + '-' +window['inv'+z].date + '-' + window['inv'+z].invoice_no	+ '-' + window['inv'+z].phone													     
