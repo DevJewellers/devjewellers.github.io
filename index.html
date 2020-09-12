@@ -1801,10 +1801,11 @@ document.getElementById("ind").value=date;
 		document.onreadystatechange = function() { 
 if (document.readyState !== "complete") {
 document.querySelector("#loader").style.display= "flex";
-
-    } 
+document.body.style.position="fixed"
+    } 
 else{
 document.querySelector("#loader").style.display="none"; 
+document.body.style.position="initial"						      
 }
     } 
 
