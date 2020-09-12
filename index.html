@@ -1804,10 +1804,7 @@ document.querySelector("#loader").style.display= "flex";
 document.body.style.position="fixed";
 document.html.style.overflow="hidden";			    
     } 
-else{
-document.querySelector("#loader").style.display="none"; 
-document.body.style.position="initial";	
-document.html.style.overflow="auto";				      
+else{			      
 }
     } 
 
@@ -1868,7 +1865,11 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 								 var saveBool=false   
 	var x=[];	
 firebase.database().ref('customers').on('value', function(snapshot){	
-					  
+	
+document.querySelector("#loader").style.display="none"; 
+document.body.style.position="initial";	
+document.html.style.overflow="auto";	
+				   
 customer_length=snapshot.val();
 if(customer_length==null){
 document.getElementById("inno").value="1"
