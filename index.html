@@ -1801,11 +1801,13 @@ document.getElementById("ind").value=date;
 		document.onreadystatechange = function() { 
 if (document.readyState !== "complete") {
 document.querySelector("#loader").style.display= "flex";
-document.body.style.position="fixed"
+document.body.style.position="fixed";
+document.html.style.overflow="hidden";			    
     } 
 else{
 document.querySelector("#loader").style.display="none"; 
-document.body.style.position="initial"						      
+document.body.style.position="initial";	
+document.html.style.overflow="auto";				      
 }
     } 
 
@@ -1852,14 +1854,15 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 				var dialog= document.getElementById("dialog") 
 				 dialog.style.display="flex"
 				document.body.style.position="fixed"
-								    
+				document.html.style.overflow="hidden";				    
 				 }	
 				/*dialog show function end*/
 								    /*dialog close function start*/
 								  function dialogClose(){
 								    new Audio('click.mp3').play() ;
 								    document.getElementById("dialog").style.display="none";
-															document.body.style.position="initial"
+								     document.body.style.position="initial"
+								document.html.style.overflow="auto";
 								    } 
 								    /*dialog close function end*/
 								 var saveBool=false   
