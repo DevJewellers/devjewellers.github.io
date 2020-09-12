@@ -1889,7 +1889,7 @@ console.log("Downloaded all customers Successfully");
   document.getElementById("clist").innerHTML="";
 if(customer_length==null){console.log("No customers!")}
 else{	
-	let z;					     
+	var z;					     
 for(z=1;z<=objLength(customer_length);z++){
 										     
 	 window['inv'+z]=customer_length[z];
@@ -1906,7 +1906,7 @@ for(z=1;z<=objLength(customer_length);z++){
 	 window['liElem'+z].style.fontSize="initial"
 	 window['liElem'+z].style.margin="10px auto"
 	 window['liElem'+z].style.cursor="pointer"	
-	 window['liElem'+z].style.fontStyle="sans-serif" console.log(z);
+	 window['liElem'+z].style.fontStyle="sans-serif"; console.log(z);
 	 window['liElem'+z].addEventListener('click',function(){ console.log(z);console.log(window['inv'+z]);get_data(window['inv'+z]);})
 	 window['liElem'+z].addEventListener('click',function(){dialogClose(); saveBool=false;})	
 	 window['liElem'+z].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET";this.style.textDecoration="underline";})
