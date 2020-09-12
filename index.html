@@ -1877,18 +1877,15 @@ document.getElementById("inno").value="1"
 					 else{
 document.getElementById("inno").value=(parseInt(objLength(customer_length))+1)
 			}      
-console.log("main data downloaded");
+console.log("Downloaded all customers Successfully");
   document.getElementById("clist").innerHTML="";
 if(customer_length==null){console.log("No customers!")}
 else{	
-	console.log("getting Customers")					     
+						     
 for(s=1;s<=objLength(customer_length);s++){
-	
-						       
- firebase.database().ref('customers/'+s).on('value', function(snapshot){
-	 														     
-	 window['inv'+s]=snapshot.val();
-	 window['invStr'+s]=window['inv'+s].name + '-' +	window['inv'+s].date + '-' + window['inv'+s].invoice_no	+ '-' + window['inv'+s].phone													     
+															     
+	 window['inv'+s]=customer_length[s];
+	 window['invStr'+s]=window['inv'+s].name + '-' +window['inv'+s].date + '-' + window['inv'+s].invoice_no	+ '-' + window['inv'+s].phone													     
 	 window['invStr'+s]= window['invStr'+s].replace(/ /g,'-');
 	 window['invStr'+s]= window['invStr'+s].replace("/",'-');
 	 window['invStr'+s]= window['invStr'+s].replace("/",'-');						   
@@ -1903,14 +1900,14 @@ for(s=1;s<=objLength(customer_length);s++){
 	 window['liElem'+s].style.cursor="pointer"	
 	 window['liElem'+s].style.fontStyle="sans-serif"					  
 	 window['liElem'+s].addEventListener('click',function(){dialogClose()})
-	 window['liElem'+s].addEventListener('click',function(){get_data(snapshot.val())})
+	 window['liElem'+s].addEventListener('click',function(){get_data(customer_length[s])})
 	 window['liElem'+s].addEventListener('click',function(){this.style.textDecoration="underline"; saveBool=false;})	
 	 window['liElem'+s].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET"})
 	 window['liElem'+s].addEventListener('mouseout',function(){this.style.color="black"})	
 	 x.push(window['liElem'+s]);										   
 	 document.getElementById("clist").appendChild(window['liElem'+s])
-				       });}}
-					console.log("Downloaded all customers Successfully")
+				     }}
+					
 						})			  
 					  		
 					  
