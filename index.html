@@ -1851,7 +1851,7 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 				var dialog= document.getElementById("dialog") 
 				 dialog.style.display="flex"
 				document.body.style.position="fixed"
-				document.html.style.overflow="hidden";				    
+				document.body.style.overflow="hidden";				    
 				 }	
 				/*dialog show function end*/
 								    /*dialog close function start*/
@@ -1880,7 +1880,8 @@ document.getElementById("inno").value=(parseInt(objLength(customer_length))+1)
 console.log("main data downloaded");
   document.getElementById("clist").innerHTML="";
 if(customer_length==null){console.log("No customers!")}
-else{					       
+else{	
+	console.log("getting Customers")					     
 for(s=1;s<=objLength(customer_length);s++){
 	
 						       
@@ -1909,6 +1910,7 @@ for(s=1;s<=objLength(customer_length);s++){
 	 x.push(window['liElem'+s]);										   
 	 document.getElementById("clist").appendChild(window['liElem'+s])
 				       });}}
+					console.log("Downloaded all customers Successfully")
 						})			  
 					  		
 					  
