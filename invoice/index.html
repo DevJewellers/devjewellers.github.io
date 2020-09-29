@@ -5,40 +5,27 @@
 	<title>Dev Jewellers Invoices</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    
-  #nam,#ad,.dis{ text-transform: uppercase;}
-	.material-icons{
-	transform:translateY(15px)
-}
-i{
-cursor:pointer;}
+	     #nam,#ad,.dis{ text-transform: uppercase;}
+	   
+	 button:active{
+     transform:scale(0.95);
+   }
 
 
 .dis{
     width:3.19cm;
 }
 
-#hlmk{
-	width:8cm;
 
-opacity:0.2;
-transform:translate(.5cm,-13.3cm);
-	
-	
-	
-	
-	
-	}
 
-#table,td.tr,th{
-background-color:white;}
+.mkg{width:0.9cm;}
 /*css for quantity*/
 .qty{
     width:.5cm;
 }
 /*css for rate*/
 .rt{
-    width:.85cm;
+    width:.91cm;
 }
 /*css for amount*/
 .amt{
@@ -46,7 +33,7 @@ background-color:white;}
     
 }
 /*css for making*/
-.mkg{width:0.74cm;}
+
 /*css for weight*/
 .wt{
     width:1.2cm;
@@ -59,18 +46,19 @@ background-color:white;}
 }
 /*css for total*/
 #ttl{
+	width: .95cm;
     font-weight:bold;
 }
 /*css for total amount*/
 #tamt,#tds{
-    width:1.4cm;
+   width: 1.5cm;
 }
-#btns{border:2px solid orangered;
+#btns{border:0;
 border-radius:5px;
 width:13.1cm;
 
-margin-top:50px;
-        margin-left:25px;}
+
+margin-left:5px;}
 
 
 
@@ -96,21 +84,19 @@ p{font-size:13px;}
     margin-left:3px;
     
 }
-#tds{width:1.5cm;}
+
 #dn{
-    width:1.75cm;
+   
     font-weight:bold;
 }
-ttl{
-	width:1.75cm
-}
+
 ul{width:100%;
 height:1cm;
     padding:0px;
     margin:0px;
 }
 #ttlfw{
-    width:3.9cm;
+    width:3.75cm;
     font-weight:bold;
     border-right:2px solid gol;
     border:;
@@ -139,7 +125,7 @@ border:2px solid re;}
     padding:px;
     transform:translateX(6px);
 }
-#sign{width:5c;
+#sign{width:4cm;
 height:1cm;}
 #foot{
     height:.5cm;
@@ -151,7 +137,7 @@ div,table,th,td,tr,p,h1,h2,h3,h4,h5,li,h6{
     margin:0px;
 }
 /*setting font size for shop address line:12*/
-#cat{border:2px solid blu;
+#cat{border:2px solid blue;
     font-size:20px;
     margin:5px;
     transform:translateY(-15px);
@@ -201,7 +187,7 @@ label{
 #inno{width:.9cm;}
 /*css for phone*/
 #phone{
-    width:55%;
+    width:57%;
 }
 /*css for name*/
 #nam{
@@ -242,12 +228,12 @@ border-bottom:2px solid orangered;
 #cname,#scnd,#cinfo{
     height:15px;
 }
-#logo{width:3cm;}
+#logo{width:4cm;}
 #invic{
     font-size:15px;
     font-weight:bolder;
     font-family:Serif;
-    transform:translateX(75px);
+    transform:translateX(65px);
 }
 
 /*CSS for inner Table*/
@@ -290,7 +276,7 @@ height:6cm;
 .clr,.dis,.qty,.rt,.tamt,.wtt,.amt,.mkg,.clr,.wt,.subwt{background-color:white;
 border:none;
 height:.4cm;
-width:;
+
 color:black;
 font-size:10px;}
 /* css for discription*/
@@ -303,7 +289,7 @@ font-size:10px;}
 .th{
     font-size:9px;
 }
-.button{
+button{
     birder:none;
     border-radius:5px;
     color:white;
@@ -313,15 +299,16 @@ font-size:10px;}
     height:1cm;
     margin:10px;
     font-size:16px;
-    cursor:pointer;
+    
 }
-#sttln{
-    width:1.75cm;    
+	   
+#sttln,#dn{
+    width: 1.88cm;
     font-weight:bold;
     color:mediumseagreen;
 }
 #sttl{
-    width:1.5cm;
+width: 1.5cm;
 }
 #fln{border:2px solid gold;
 border-bottom:none;
@@ -329,14 +316,14 @@ border-left:none;}
 
 #spt{
     font-weight:bold;
-    width:3cm;
+    width:2.6cm;
 }
 #sptv{
     width:2.1cm;
 }
 #gpt{
     font-weight:bold;
-    width:3cm;
+    width:2.6cm;
 }
 #gptv{
     width:2.1cm;
@@ -344,12 +331,12 @@ border-left:none;}
 #b{color:red;}
 #subg1,#subg2{width:3.05cm;}
 #subt1,#subt2{width:2.83cm;}
-
+#first,#second,#third{display:none;}
 #first{text-align:center ;}
 span{text-align:center;}
-    
-    
-  </style>
+
+</style>
+
 </head>
 
 <body>
