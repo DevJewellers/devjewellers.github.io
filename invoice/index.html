@@ -808,9 +808,9 @@ else{
 
 		   
 		   
-		   
-		   if(window.location.search.includes("?dev-jewellers-")){
-			   var searchNumber=window.location.search.replace("?dev-jewellers-","");
+		   var decodedSearch=atob(window.location.search.replace("?",""))
+		   if(decodedSearch.includes("dev-jewellers-")){
+			   var searchNumber=decodedSearch.replace("dev-jewellers-","");
 			   console.log(searchNumber)
 			database.ref('customers/'+searchNumber).on('value', function(snapshot){get_data(snapshot.val());
 											        document.getElementById("invoice").style.display="block";
