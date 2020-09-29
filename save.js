@@ -274,7 +274,7 @@ function get_data(mydata){
 
 
 var qr=document.getElementById("qrImg")
-	qr.src="https://chart.googleapis.com/chart?chs=500x500&cht=qr&choe=UTF-8&chld=l|0&chl=https://devjewellers.github.io/invoice/?"+btoa("dev-jewellers-"+document.getElementById("inno").value);
+	qr.src="https://chart.googleapis.com/chart?chs=500x500&cht=qr&choe=UTF-8&chld=l|0&chl=https://devjewellers.github.io/invoice/?"+btoa("dev-jewellers-"+myData.invoice_no);
 
 
 
