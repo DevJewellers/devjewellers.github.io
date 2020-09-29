@@ -1969,7 +1969,7 @@ invoiceNo.style.outline="5px solid blue"
 													     
 			function share(){
 				var sharea=document.getElementById("sharea")									     
-				sharea.href="https://api.whatsapp.com/send?phone=91"+document.getElementById("phone").value+"&text=Thanks For Purchasing at Dev Jewellers.";								     
+				sharea.href="https://api.whatsapp.com/send?phone=91"+document.getElementById("phone").value+"&text=Thanks For Purchasing at Dev Jewellers. \n To View or Print Your Invoice, Click on this link 👉 https://devjewellers.github.io/invoice/?"+btoa("dev-jewellers-"+document.getElementById("inno").value);								     
 												}										     
 									     
 </script>
